@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quito Restaurants</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+<h1>🍽 Restaurants Near La Carolina</h1>
+
+<button onclick="loadRestaurants()">Load Restaurants</button>
+
+<div id="results"></div>
+
+<script>
+async function loadRestaurants() {
+
+    const response = await fetch("/api/restaurants");
+    const data = await response.json();
+
+    const container = document.getElementById("results");
+    container.innerHTML = "";
+
+    data.forEach(r => {
+
+        container.innerHTML += `
+        <div class="card">
+            <img src="/static/imagen.jpg" alt="Restaurant placeholder" class="card-image" loading="lazy">
+            <div class="card-body">
+                <h3>${r.name}</h3>
+                <p>${r.address || ""}</p>
+                <p>⭐ Rating: ${r.rating || "N/A"}</p>
+                <p>👥 Reviews: ${r.users || 0}</p>
+            </div>
+        </div>
+        `;
+    });
+}
+</script>

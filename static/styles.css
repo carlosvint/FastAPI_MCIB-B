@@ -1,0 +1,114 @@
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    margin: 40px;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ...existing code... */
+
+/* Grid container: 3 cards per row on large screens */
+#results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Card styling */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image placeholder fits card width */
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card body spacing */
+.card-body {
+    padding: 0.75rem;
+}
+
+/* Responsive: 2 columns on medium, 1 on small */
+@media (max-width: 900px) {
+    #results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    #results {
+        grid-template-columns: 1fr;
+    }
+}
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Card styling */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image placeholder fits card width */
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card body spacing */
+.card-body {
+    padding: 0.75rem;
+}
+
+/* Responsive: 2 columns on medium, 1 on small */
+@media (max-width: 900px) {
+    #results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    #results {
+        grid-template-columns: 1fr;
+    }
+}
+
